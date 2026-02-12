@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReZ26 | Gameplay Programmer Portfolio</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="wordmark" href="/">ReZ26</a>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a class="button secondary" href="#">Resume</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Gameplay programmer</p>
+            <h1 class="title">Gameplay Programmer building responsive systems and readable code.</h1>
+            <p class="lede">
+              Unreal Engine (C++/Blueprint), Unity (C#), gameplay mechanics, input, and technical prototyping.
+            </p>
+            <div class="cta-row">
+              <a class="button primary" href="/projects/">View Featured Projects</a>
+              <a class="button secondary" href="/contact/">Contact</a>
+            </div>
+          </div>
+          <div class="diagram-card reveal" aria-hidden="true">
+            <svg class="diagram" viewBox="0 0 420 240" role="img" aria-label="System diagram illustration">
+              <rect x="16" y="16" width="120" height="50" fill="none" stroke="#1E3A5F" stroke-width="1.5" rx="10" />
+              <rect x="284" y="16" width="120" height="50" fill="none" stroke="#1E3A5F" stroke-width="1.5" rx="10" />
+              <rect x="16" y="172" width="160" height="50" fill="none" stroke="#1E3A5F" stroke-width="1.5" rx="10" />
+              <rect x="244" y="172" width="160" height="50" fill="none" stroke="#1E3A5F" stroke-width="1.5" rx="10" />
+              <circle cx="210" cy="120" r="30" fill="none" stroke="#1E3A5F" stroke-width="1.5" />
+              <line x1="76" y1="66" x2="190" y2="98" stroke="#1E3A5F" stroke-width="1.5" />
+              <line x1="344" y1="66" x2="230" y2="98" stroke="#1E3A5F" stroke-width="1.5" />
+              <line x1="96" y1="172" x2="190" y2="142" stroke="#1E3A5F" stroke-width="1.5" />
+              <line x1="324" y1="172" x2="230" y2="142" stroke="#1E3A5F" stroke-width="1.5" />
+              <polyline points="210,90 210,60 260,60" fill="none" stroke="#1E3A5F" stroke-width="1.5" />
+              <circle cx="260" cy="60" r="4" fill="#1E3A5F" />
+              <circle cx="210" cy="120" r="4" fill="#1E3A5F" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal">
+            <p class="eyebrow">Featured projects</p>
+            <h2 class="title">Systems-focused gameplay work</h2>
+          </div>
+          <div class="grid three" style="margin-top: 40px;">
+            <article class="card reveal">
+              <p class="meta">Unreal 5.4 | Blueprint</p>
+              <h3 class="title">RewindSystemComponent_UNREAL-ENGINE</h3>
+              <p>A time-rewind gameplay mechanic with state recording, playback, and supporting VFX/audio/UI.</p>
+              <ul>
+                <li>Recorded character state snapshots (position, rotation, velocity, animation time)</li>
+                <li>Triggered rewind playback + ghost/trail visualization</li>
+                <li>Enhanced Input integration + clear system documentation</li>
+              </ul>
+              <a class="link" href="/projects/rewind-system/">Read case study</a>
+            </article>
+            <article class="card reveal">
+              <p class="meta">Unity | C# + ShaderLab/HLSL</p>
+              <h3 class="title">PaintRunner</h3>
+              <p>Runner-style prototype emphasizing gameplay loop and stylized shader-driven visuals.</p>
+              <ul>
+                <li>C# gameplay loop + obstacle/runner logic</li>
+                <li>ShaderLab/HLSL effects showcased as a rendering feature</li>
+                <li>Clean, minimal UI and readable architecture</li>
+              </ul>
+              <a class="link" href="/projects/paintrunner/">Read case study</a>
+            </article>
+            <article class="card reveal">
+              <p class="meta">Unreal | C++ + Enhanced Input</p>
+              <h3 class="title">TeamProject</h3>
+              <p>C++ character controller foundation using Enhanced Input and movement/camera tuning.</p>
+              <ul>
+                <li>ACharacter controller + camera boom/follow camera</li>
+                <li>Enhanced Input bindings for move/look/jump</li>
+                <li>Gameplay gating variables exposed to Blueprint</li>
+              </ul>
+              <a class="link" href="/projects/teamproject/">Read case study</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt diagram-bg">
+        <div class="container">
+          <div class="reveal">
+            <p class="eyebrow">Skills & focus</p>
+            <h2 class="title">Evidence-driven strengths</h2>
+            <div class="icon-row" style="margin-top: 16px;">
+              <svg aria-hidden="true"><use href="/assets/illustrations/icons.svg#icon-controller"></use></svg>
+              <svg aria-hidden="true"><use href="/assets/illustrations/icons.svg#icon-rewind"></use></svg>
+              <svg aria-hidden="true"><use href="/assets/illustrations/icons.svg#icon-code"></use></svg>
+              <svg aria-hidden="true"><use href="/assets/illustrations/icons.svg#icon-shader"></use></svg>
+              <svg aria-hidden="true"><use href="/assets/illustrations/icons.svg#icon-graph"></use></svg>
+            </div>
+          </div>
+          <div class="grid three" style="margin-top: 40px;">
+            <article class="skill-card reveal">
+              <h3 class="title">Gameplay Systems</h3>
+              <ul>
+                <li>Character movement & camera <a class="proof-tag" href="/projects/teamproject/#movement">TeamProject</a></li>
+                <li>Input handling (Enhanced Input, action mapping) <a class="proof-tag" href="/projects/rewind-system/#input">Rewind</a></li>
+                <li>Combat/interaction hooks <a class="proof-tag" href="/projects/teamproject/#blueprint-gates">TeamProject</a></li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <h3 class="title">Systems Thinking</h3>
+              <ul>
+                <li>Recording/playback patterns (rewind/replay) <a class="proof-tag" href="/projects/rewind-system/#rewind-flow">Rewind</a></li>
+                <li>Data structures for history buffers <a class="proof-tag" href="/projects/rewind-system/#history-buffer">Rewind</a></li>
+                <li>Debuggable, modular architecture <a class="proof-tag" href="/projects/paintrunner/#architecture">PaintRunner</a></li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <h3 class="title">Rendering / VFX Awareness</h3>
+              <ul>
+                <li>UE materials + Niagara basics <a class="proof-tag" href="/projects/rewind-system/#vfx">Rewind</a></li>
+                <li>Unity ShaderLab/HLSL familiarity <a class="proof-tag" href="/projects/paintrunner/#shader-showcase">PaintRunner</a></li>
+                <li>Visual clarity for gameplay feedback <a class="proof-tag" href="/projects/paintrunner/#shader-showcase">PaintRunner</a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal">
+            <p class="eyebrow">How I build</p>
+            <h2 class="title">Principles that guide every system</h2>
+          </div>
+          <div class="grid three" style="margin-top: 32px;">
+            <div class="principle reveal">Player feel first</div>
+            <div class="principle reveal">Systems over spaghetti</div>
+            <div class="principle reveal">Prototype to measure to iterate</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="grid two">
+          <div>
+            <h3 class="title">ReZ26</h3>
+            <p class="lede">Gameplay programming systems with clean architecture and tactile feel.</p>
+          </div>
+          <div class="links">
+            <a href="mailto:hello@rez26.dev">hello@rez26.dev</a>
+            <a href="https://github.com/ReZ26">GitHub</a>
+            <a href="#">Resume</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

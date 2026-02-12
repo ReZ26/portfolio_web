@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rewind System | ReZ26</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="wordmark" href="/">ReZ26</a>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a class="button secondary" href="#">Resume</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <div class="case-header">
+            <div class="reveal">
+              <p class="eyebrow">Case study</p>
+              <h1 class="title">RewindSystemComponent_UNREAL-ENGINE</h1>
+              <div class="case-meta">
+                <span>Role: Gameplay Programmer</span>
+                <span>Tech: Unreal Engine 5.4, Blueprint, Enhanced Input</span>
+              </div>
+              <div class="case-links">
+                <a class="button secondary" href="#">GitHub</a>
+                <a class="button secondary" href="#">Video</a>
+                <a class="button secondary" href="#">Build</a>
+              </div>
+            </div>
+            <figure class="media-frame reveal">
+              <div class="media" aria-label="Rewind mechanic preview"></div>
+              <figcaption>Rewind playback with ghost trail, UI hint, and audio cue sync.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="overview">
+        <div class="container reveal">
+          <h2 class="title">Overview</h2>
+          <p class="lede">
+            A flagship gameplay system that records character state snapshots, rewinds on demand, and resumes from a
+            new state with clear player feedback. The system is designed to be readable, deterministic, and ready for
+            iteration.
+          </p>
+          <ul style="margin-top: 18px; padding-left: 18px; color: var(--ink-soft);">
+            <li>Demonstrates recording/playback architecture and input-driven state transitions.</li>
+            <li>Ships with VFX, audio, and UI cues to clarify the rewind timing.</li>
+            <li>Organized as a reusable component with documentation and debug hooks.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="key-features">
+        <div class="container reveal">
+          <h2 class="title">Key features</h2>
+          <ul style="margin-top: 18px; padding-left: 18px; color: var(--ink-soft);">
+            <li>Snapshot capture for position, rotation, velocity, and animation time with a ring buffer.</li>
+            <li>Playback interpolation to smooth rewind motion without input jitter.</li>
+            <li>Input-gated rewind trigger with Enhanced Input for consistent action mapping.</li>
+            <li>Ghost trail and hologram material applied during rewind for clear feedback.</li>
+            <li>Audio sting and UI hint synchronized with the rewind state change.</li>
+            <li>Expose tuning variables and debug toggles for rapid iteration.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section alt" id="rewind-flow">
+        <div class="container reveal">
+          <h2 class="title">System breakdown</h2>
+          <p class="lede">Rewind flow: Recording -> Store snapshots -> Trigger rewind -> Playback/interpolate -> Resume.</p>
+          <div class="diagram-panel" style="margin-top: 24px;">
+            <div class="diagram-grid">
+              <div class="diagram">
+                <svg viewBox="0 0 280 180" role="img" aria-label="Rewind flow diagram">
+                  <rect x="12" y="16" width="110" height="34" rx="8" fill="none" stroke="#1E3A5F" stroke-width="1.4" />
+                  <rect x="12" y="70" width="110" height="34" rx="8" fill="none" stroke="#1E3A5F" stroke-width="1.4" />
+                  <rect x="12" y="124" width="110" height="34" rx="8" fill="none" stroke="#1E3A5F" stroke-width="1.4" />
+                  <rect x="156" y="70" width="110" height="34" rx="8" fill="none" stroke="#1E3A5F" stroke-width="1.4" />
+                  <line x1="122" y1="33" x2="156" y2="87" stroke="#1E3A5F" stroke-width="1.4" />
+                  <line x1="122" y1="87" x2="156" y2="87" stroke="#1E3A5F" stroke-width="1.4" />
+                  <line x1="122" y1="141" x2="156" y2="87" stroke="#1E3A5F" stroke-width="1.4" />
+                  <circle cx="156" cy="87" r="4" fill="#1E3A5F" />
+                </svg>
+              </div>
+              <div class="callout" id="history-buffer">
+                History buffer holds fixed-rate snapshots with prune-on-write to keep memory stable.
+              </div>
+              <div class="callout" id="input">
+                Enhanced Input action triggers the rewind state change and locks movement inputs while rewinding.
+              </div>
+              <div class="callout" id="vfx">
+                Niagara trail, ghost mesh, and rewind material mark the playback window.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="challenges">
+        <div class="container reveal">
+          <h2 class="title">Challenges & solutions</h2>
+          <div class="grid three" style="margin-top: 20px;">
+            <div class="challenge">
+              <h4>Challenge: Playback felt jittery</h4>
+              <p class="lede">Approach: Added interpolation between samples and smoothed velocity blending.</p>
+              <p class="lede">Result: Rewind motion reads as intentional and readable.</p>
+            </div>
+            <div class="challenge">
+              <h4>Challenge: Input conflicts during rewind</h4>
+              <p class="lede">Approach: Input gate + state machine ensures rewind overrides locomotion.</p>
+              <p class="lede">Result: Predictable control and clean transitions.</p>
+            </div>
+            <div class="challenge">
+              <h4>Challenge: Communicating state change</h4>
+              <p class="lede">Approach: Combined UI prompt, audio cue, and ghost VFX.</p>
+              <p class="lede">Result: Players recognize the rewind window instantly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="next">
+        <div class="container reveal">
+          <h2 class="title">What I would improve next</h2>
+          <ul style="margin-top: 18px; padding-left: 18px; color: var(--ink-soft);">
+            <li>Persist snapshot metadata for checkpoint-specific rewinds.</li>
+            <li>Expose a designer-facing curve to shape rewind speed.</li>
+            <li>Add network-safe replication for multiplayer experiments.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="links">
+        <div class="container reveal">
+          <h2 class="title">Links & credits</h2>
+          <p class="lede">GitHub, video, and build links can be added here.</p>
+          <div class="case-links" style="margin-top: 16px;">
+            <a class="button secondary" href="#">GitHub</a>
+            <a class="button secondary" href="#">Video</a>
+            <a class="button secondary" href="#">Build</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="grid two">
+          <div>
+            <h3 class="title">ReZ26</h3>
+            <p class="lede">Gameplay programming systems with clean architecture and tactile feel.</p>
+          </div>
+          <div class="links">
+            <a href="mailto:hello@rez26.dev">hello@rez26.dev</a>
+            <a href="https://github.com/ReZ26">GitHub</a>
+            <a href="#">Resume</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

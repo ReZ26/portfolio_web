@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeamProject | ReZ26</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="wordmark" href="/">ReZ26</a>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a class="button secondary" href="#">Resume</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <div class="case-header">
+            <div class="reveal">
+              <p class="eyebrow">Case study</p>
+              <h1 class="title">TeamProject</h1>
+              <div class="case-meta">
+                <span>Role: Gameplay Programmer</span>
+                <span>Tech: Unreal Engine, C++, Enhanced Input</span>
+              </div>
+              <div class="case-links">
+                <a class="button secondary" href="#">GitHub</a>
+                <a class="button secondary" href="#">Video</a>
+                <a class="button secondary" href="#">Build</a>
+              </div>
+            </div>
+            <figure class="media-frame reveal">
+              <div class="media" aria-label="Character controller preview"></div>
+              <figcaption>Movement tuning, camera boom setup, and input binding validation.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="overview">
+        <div class="container reveal">
+          <h2 class="title">Overview</h2>
+          <p class="lede">
+            A C++ character controller foundation built for team iteration. The focus is on clean input mapping,
+            responsive movement, and Blueprint-facing gates that allow designers to toggle actions safely.
+          </p>
+          <ul style="margin-top: 18px; padding-left: 18px; color: var(--ink-soft);">
+            <li>Shows a reliable input pipeline using Enhanced Input actions.</li>
+            <li>Demonstrates camera rig configuration for readable gameplay feedback.</li>
+            <li>Supports future combat and traversal hooks through exposed variables.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="key-features">
+        <div class="container reveal">
+          <h2 class="title">Key features</h2>
+          <ul style="margin-top: 18px; padding-left: 18px; color: var(--ink-soft);">
+            <li>ACharacter-based controller with tuned movement and jump arcs.</li>
+            <li>Spring arm and follow camera configuration for consistent framing.</li>
+            <li>Enhanced Input action mapping for move, look, and jump.</li>
+            <li>Blueprint-exposed gating variables for combat and dodge readiness.</li>
+            <li>Component-oriented architecture for quick extension.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section alt" id="system-breakdown">
+        <div class="container reveal">
+          <h2 class="title">System breakdown</h2>
+          <div class="diagram-panel" style="margin-top: 24px;">
+            <div class="diagram-grid">
+              <div class="diagram" id="movement">
+                <svg viewBox="0 0 280 180" role="img" aria-label="Movement and camera diagram">
+                  <rect x="16" y="20" width="110" height="34" rx="8" fill="none" stroke="#1E3A5F" stroke-width="1.4" />
+                  <rect x="16" y="76" width="110" height="34" rx="8" fill="none" stroke="#1E3A5F" stroke-width="1.4" />
+                  <rect x="156" y="48" width="110" height="34" rx="8" fill="none" stroke="#1E3A5F" stroke-width="1.4" />
+                  <line x1="126" y1="37" x2="156" y2="65" stroke="#1E3A5F" stroke-width="1.4" />
+                  <line x1="126" y1="93" x2="156" y2="65" stroke="#1E3A5F" stroke-width="1.4" />
+                  <circle cx="156" cy="65" r="4" fill="#1E3A5F" />
+                </svg>
+              </div>
+              <div class="callout" id="input-setup">
+                Enhanced Input mapping context assigns move, look, and jump actions with clean bindings.
+              </div>
+              <div class="callout" id="blueprint-gates">
+                Can_Dodge and Can_Attack toggles exposed to Blueprint gate action availability.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="challenges">
+        <div class="container reveal">
+          <h2 class="title">Challenges & solutions</h2>
+          <div class="grid three" style="margin-top: 20px;">
+            <div class="challenge">
+              <h4>Challenge: Maintaining input clarity</h4>
+              <p class="lede">Approach: Action-based mapping with clear naming and Blueprint hooks.</p>
+              <p class="lede">Result: Team members can extend actions without breaking base controls.</p>
+            </div>
+            <div class="challenge">
+              <h4>Challenge: Camera comfort</h4>
+              <p class="lede">Approach: Tuned spring arm length, lag, and rotation constraints.</p>
+              <p class="lede">Result: Movement reads cleanly even during rapid turns.</p>
+            </div>
+            <div class="challenge">
+              <h4>Challenge: Future-proofing combat hooks</h4>
+              <p class="lede">Approach: Blueprint-exposed gating variables and modular component slots.</p>
+              <p class="lede">Result: Designers can iterate without C++ rework.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="next">
+        <div class="container reveal">
+          <h2 class="title">What I would improve next</h2>
+          <ul style="margin-top: 18px; padding-left: 18px; color: var(--ink-soft);">
+            <li>Add locomotion state blending with animation-driven curves.</li>
+            <li>Implement footstep events for timing and audio cues.</li>
+            <li>Expose camera profiles for different gameplay modes.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="links">
+        <div class="container reveal">
+          <h2 class="title">Links & credits</h2>
+          <p class="lede">GitHub, video, and build links can be added here.</p>
+          <div class="case-links" style="margin-top: 16px;">
+            <a class="button secondary" href="#">GitHub</a>
+            <a class="button secondary" href="#">Video</a>
+            <a class="button secondary" href="#">Build</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="grid two">
+          <div>
+            <h3 class="title">ReZ26</h3>
+            <p class="lede">Gameplay programming systems with clean architecture and tactile feel.</p>
+          </div>
+          <div class="links">
+            <a href="mailto:hello@rez26.dev">hello@rez26.dev</a>
+            <a href="https://github.com/ReZ26">GitHub</a>
+            <a href="#">Resume</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PaintRunner | ReZ26</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="wordmark" href="/">ReZ26</a>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a class="button secondary" href="#">Resume</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <div class="case-header">
+            <div class="reveal">
+              <p class="eyebrow">Case study</p>
+              <h1 class="title">PaintRunner</h1>
+              <div class="case-meta">
+                <span>Role: Gameplay Programmer</span>
+                <span>Tech: Unity, C#, ShaderLab/HLSL</span>
+              </div>
+              <div class="case-links">
+                <a class="button secondary" href="#">GitHub</a>
+                <a class="button secondary" href="#">Video</a>
+                <a class="button secondary" href="#">Build</a>
+              </div>
+            </div>
+            <figure class="media-frame reveal">
+              <div class="media" aria-label="PaintRunner gameplay preview"></div>
+              <figcaption>Runner loop prototype with shader-driven environment accents.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="overview">
+        <div class="container reveal">
+          <h2 class="title">Overview</h2>
+          <p class="lede">
+            A fast prototype exploring runner-style gameplay feel and stylized rendering. The project combines a
+            lightweight gameplay loop with a small shader showcase to test visual feedback and readability.
+          </p>
+          <ul style="margin-top: 18px; padding-left: 18px; color: var(--ink-soft);">
+            <li>Gameplay loop focused on player feel and obstacle pacing.</li>
+            <li>ShaderLab/HLSL effects used to reinforce movement and impact.</li>
+            <li>UI and architecture kept minimal for easy iteration.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="key-features">
+        <div class="container reveal">
+          <h2 class="title">Key features</h2>
+          <ul style="margin-top: 18px; padding-left: 18px; color: var(--ink-soft);">
+            <li>Runner movement tuned for responsiveness and readable pacing.</li>
+            <li>Obstacle spawning system with clear lane structure.</li>
+            <li>Score and combo tracking with minimal UI overhead.</li>
+            <li>ShaderLab/HLSL effects that emphasize speed and paint impacts.</li>
+            <li>Clean scene structure and script organization for quick swaps.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section alt" id="shader-showcase">
+        <div class="container reveal">
+          <h2 class="title">Shader Showcase</h2>
+          <p class="lede">A compact set of effects built in ShaderLab/HLSL to support gameplay readability.</p>
+          <div class="grid three" style="margin-top: 20px;">
+            <figure class="media-frame reveal">
+              <div class="media" aria-label="Paint trail shader"></div>
+              <figcaption>Paint trail surface shader that fades with distance.</figcaption>
+            </figure>
+            <figure class="media-frame reveal">
+              <div class="media" aria-label="Impact splash shader"></div>
+              <figcaption>Impact splash effect with color cycling and soft edge falloff.</figcaption>
+            </figure>
+            <figure class="media-frame reveal">
+              <div class="media" aria-label="Speed lines shader"></div>
+              <figcaption>Speed lines overlay shader to reinforce forward momentum.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="system-breakdown">
+        <div class="container reveal">
+          <h2 class="title">System breakdown</h2>
+          <div class="diagram-panel" style="margin-top: 24px;">
+            <div class="diagram-grid">
+              <div class="diagram" id="architecture">
+                <svg viewBox="0 0 280 180" role="img" aria-label="Gameplay loop diagram">
+                  <rect x="18" y="20" width="110" height="34" rx="8" fill="none" stroke="#1E3A5F" stroke-width="1.4" />
+                  <rect x="18" y="76" width="110" height="34" rx="8" fill="none" stroke="#1E3A5F" stroke-width="1.4" />
+                  <rect x="18" y="132" width="110" height="34" rx="8" fill="none" stroke="#1E3A5F" stroke-width="1.4" />
+                  <line x1="128" y1="37" x2="200" y2="92" stroke="#1E3A5F" stroke-width="1.4" />
+                  <line x1="128" y1="93" x2="200" y2="92" stroke="#1E3A5F" stroke-width="1.4" />
+                  <line x1="128" y1="149" x2="200" y2="92" stroke="#1E3A5F" stroke-width="1.4" />
+                  <circle cx="200" cy="92" r="4" fill="#1E3A5F" />
+                </svg>
+              </div>
+              <div class="callout">
+                Runner loop updates movement, obstacle checks, and score in a predictable tick.
+              </div>
+              <div class="callout">
+                Shader triggers map to impact events for immediate feedback.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="challenges">
+        <div class="container reveal">
+          <h2 class="title">Challenges & solutions</h2>
+          <div class="grid three" style="margin-top: 20px;">
+            <div class="challenge">
+              <h4>Challenge: Maintaining speed readability</h4>
+              <p class="lede">Approach: Used shader overlays and tighter camera framing.</p>
+              <p class="lede">Result: Player speed is clear without UI clutter.</p>
+            </div>
+            <div class="challenge">
+              <h4>Challenge: Obstacle pacing</h4>
+              <p class="lede">Approach: Adjusted spawn cadence and lane spacing.</p>
+              <p class="lede">Result: Consistent difficulty ramp with clean flow.</p>
+            </div>
+            <div class="challenge">
+              <h4>Challenge: Keeping code readable</h4>
+              <p class="lede">Approach: Modular scripts with a focused game loop class.</p>
+              <p class="lede">Result: Quick iteration with minimal refactors.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="next">
+        <div class="container reveal">
+          <h2 class="title">What I would improve next</h2>
+          <ul style="margin-top: 18px; padding-left: 18px; color: var(--ink-soft);">
+            <li>Introduce difficulty curves driven by player performance.</li>
+            <li>Add more shader variants for terrain and obstacle feedback.</li>
+            <li>Build a quick replay capture for feel tuning.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="links">
+        <div class="container reveal">
+          <h2 class="title">Links & credits</h2>
+          <p class="lede">GitHub, video, and build links can be added here.</p>
+          <div class="case-links" style="margin-top: 16px;">
+            <a class="button secondary" href="#">GitHub</a>
+            <a class="button secondary" href="#">Video</a>
+            <a class="button secondary" href="#">Build</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="grid two">
+          <div>
+            <h3 class="title">ReZ26</h3>
+            <p class="lede">Gameplay programming systems with clean architecture and tactile feel.</p>
+          </div>
+          <div class="links">
+            <a href="mailto:hello@rez26.dev">hello@rez26.dev</a>
+            <a href="https://github.com/ReZ26">GitHub</a>
+            <a href="#">Resume</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
